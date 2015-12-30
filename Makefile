@@ -5,10 +5,32 @@
 #LOCAL = /usr/local
 #OPT = /usr/local
 
-#CC = clang++ -std=c++11
+CC = clang++
+CFLAGS = -std=c++11
+GLFW_LIBS = -lglfw3
+FRAMEWORKS = -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
+LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
+
+.o:
+	$(CC) $(CFLAGS) -c -o $*.o $<
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c -o $*.o $<
+
+.cxx.o:
+	$(CC) $(CFLAGS) -c -o $*.o $<
+
+ALL.O = main.o \
+	test.o
+
+engine: $(ALL.O)
+	$(CC) $(CFLAGS) -o $@ $(ALL.O) $(LIBS)
 
 tst:
-	clang++ -o test main.cpp -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
+	clang++ -o bin/test test.cpp -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
 
 clean_tst:
-	rm test
+	rm -f $(ALL.0) bin/test
+
+clean_engine:
+	rm -f $(ALL.O) bin/engine
