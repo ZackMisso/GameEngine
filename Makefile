@@ -20,8 +20,9 @@ LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
 .cxx.o:
 	$(CC) $(CFLAGS) -c -o $*.o $<
 
-ALL.O = main.o \
-	test.o math/vec2.o math/vec2d.o
+ALL.O = main.o test.o \
+	math/vec2.o math/vec2d.o math/vec2i.o math/quat.o math/vec3.o math/vec3d.o math/vec3i.o \
+	physics/quat.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o $@ $(ALL.O) $(LIBS)
