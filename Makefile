@@ -21,7 +21,7 @@ LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
 	$(CC) $(CFLAGS) -c -o $*.o $<
 
 ALL.O = main.o \
-	test.o
+	test.o math/vec2.o math/vec2d.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o $@ $(ALL.O) $(LIBS)
