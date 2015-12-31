@@ -2,6 +2,7 @@
 #define __QUAT_H__
 
 #include "../math/vec3.h"
+#include "transformation.h"
 
 class Quat : public Transformation {
 private:
@@ -28,6 +29,6 @@ public:
 	// operator methods
 	Vec3 rotateVector(Vec3 &vec);
 	void multiply(Quat *other);*/
-}
+};
 
 #endif

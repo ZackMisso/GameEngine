@@ -1,12 +1,12 @@
 #include "vec2d.h"
-#include <math.h>
+#include <tgmath.h>
 
 Vec2d::Vec2d(){
 	xpos = 0.0;
 	ypos = 0.0;
 }
 
-Vec2d:Vec2d(double x,double y){
+Vec2d::Vec2d(double x,double y){
 	xpos = x;
 	ypos = y;
 }

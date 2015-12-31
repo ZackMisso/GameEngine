@@ -18,6 +18,6 @@ public:
 	float magnitude();
 	void normalize();
 	// operators
-}
+};
 
 #endif

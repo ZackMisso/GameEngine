@@ -13,6 +13,6 @@ public:
 	void normalize();
 	double magnitude();
 	// operators
-}
+};
 
 #endif

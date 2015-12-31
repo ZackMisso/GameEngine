@@ -1,6 +1,5 @@
 #include "vec3.h"
-
-#include <math.h>
+#include <tgmath.h>
 
 Vec3::Vec3(){
 	xpos = 0.0f;

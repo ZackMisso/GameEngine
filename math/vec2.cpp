@@ -1,5 +1,5 @@
 #include "vec2.h"
-#include <math.h>
+#include <tgmath.h>
 
 Vec2::Vec2(){
 	xpos = 0.0f;

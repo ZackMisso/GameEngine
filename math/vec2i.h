@@ -12,6 +12,6 @@ public:
 	// methods
 	int magnitude();
 	// operators
-}
+};
 
 #endif
