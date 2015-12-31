@@ -25,7 +25,7 @@ ALL.O = main.o test.o \
 	physics/quat.o physics/transformation.o
 
 engine: $(ALL.O)
-	$(CC) $(CFLAGS) -o $@ $(ALL.O) $(LIBS)
+	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)
 
 tst:
 	clang++ -o bin/test test.cpp -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo

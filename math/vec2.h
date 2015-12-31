@@ -11,8 +11,15 @@ public:
 	Vec2(float x,float y);
 	// methods
 	void normalize();
-	float magnitude();	
+	void negate();
+	float magnitude();
 	// operators
+	Vec2 operator+(const Vec2& c);
+	//Vec2 operator+=(const Vec2& c);
+	Vec2 operator-(const Vec2& c);
+	//Vec2 operator-=(const Vec2& c);
+	Vec2 operator*(const float c);
+	Vec2 operator/(const float c);
 };
 
 #endif

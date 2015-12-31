@@ -11,8 +11,13 @@ public:
 	Vec2d(double x,double y);
 	// methods
 	void normalize();
+	void negate();
 	double magnitude();
 	// operators
+	Vec2d operator+(const Vec2d& c);
+	Vec2d operator-(const Vec2d& c);
+	Vec2d operator*(const double c);
+	Vec2d operator/(const double c);
 };
 
 #endif

@@ -14,8 +14,13 @@ class Vec3i {
 	Vec3i(Vec2i v,int z);
 	Vec3i(int x,int y,int z);
 	// methods
+	void negate();
 	int magnitude();
 	// operators
+	Vec3i operator+(const Vec3i& c);
+	Vec3i operator-(const Vec3i& c);
+	Vec3i operator*(const int c);
+	Vec3i operator/(const int c);
 };
 
 #endif

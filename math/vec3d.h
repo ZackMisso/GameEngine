@@ -16,8 +16,13 @@ public:
 	Vec3d(double x,double y,double z);
 	// methods
 	double magnitude();
+	void negate();
 	void normalize();
 	// operators
+	Vec3d operator+(const Vec3d& c);
+	Vec3d operator-(const Vec3d& c);
+	Vec3d operator*(const double c);
+	Vec3d operator/(const double c);
 };
 
 #endif

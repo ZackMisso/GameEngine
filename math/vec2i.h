@@ -10,8 +10,13 @@ public:
 	Vec2i();
 	Vec2i(int x,int y);
 	// methods
+	void negate();
 	int magnitude();
 	// operators
+	Vec2i operator+(const Vec2i& c);
+	Vec2i operator-(const Vec2i& c);
+	Vec2i operator*(const int c);
+	Vec2i operator/(const int c);
 };
 
 #endif

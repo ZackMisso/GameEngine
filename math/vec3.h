@@ -16,8 +16,13 @@ public:
 	Vec3(float x,float y,float z);
 	// methods
 	float magnitude();
+	void negate();
 	void normalize();
 	// operators
+	Vec3 operator+(const Vec3& c);
+	Vec3 operator-(const Vec3& c);
+	Vec3 operator*(const float c);
+	Vec3 operator/(const float c);
 };
 
 #endif

@@ -6,7 +6,9 @@ public:
 	// instance variables
 	float mat[4][4];
 	// constructors;
-	//Mat4();
+	Mat4();
+	// methods
+	void print();
 };
 
 #endif
