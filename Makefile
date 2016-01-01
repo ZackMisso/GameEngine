@@ -20,9 +20,12 @@ LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
 .cxx.o:
 	$(CC) $(CFLAGS) -c -o $*.o $<
 
-ALL.O = main.o test.o \
+#ALL.O = main.o test.o \
+
+ALL.O = main.o \
 	math/vec2.o math/vec2d.o math/vec2i.o math/vec3.o math/vec3d.o math/vec3i.o math/mat4.o \
-	physics/quat.o physics/transformation.o
+	physics/quat.o physics/transformation.o \
+	subsystems/memory/memsub.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)

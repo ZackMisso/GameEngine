@@ -13,6 +13,9 @@ public:
 	void normalize();
 	void negate();
 	double magnitude();
+	Vec2d copy();
+	// debug
+	void print();
 	// operators
 	Vec2d operator+(const Vec2d& c);
 	Vec2d operator-(const Vec2d& c);

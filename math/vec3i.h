@@ -16,6 +16,9 @@ class Vec3i {
 	// methods
 	void negate();
 	int magnitude();
+	Vec3i copy();
+	// debug
+	void print();
 	// operators
 	Vec3i operator+(const Vec3i& c);
 	Vec3i operator-(const Vec3i& c);

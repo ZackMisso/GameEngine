@@ -1,4 +1,7 @@
 #include "vec3i.h"
+#include <iostream>
+
+using namespace std;
 
 Vec3i::Vec3i() {
 	xpos = 0;
@@ -32,6 +35,15 @@ void Vec3i::negate() {
 
 int Vec3i::magnitude() {
 	return xpos*xpos + ypos*ypos + zpos*zpos;
+}
+
+Vec3i Vec3i::copy() {
+	Vec3i tmp(xpos,ypos,zpos);
+	return tmp;
+}
+
+void Vec3i::print() {
+	cout << "X :: " << xpos << " Y :: " << ypos << " Z :: " << zpos << endl;
 }
 
 Vec3i Vec3i::operator+(const Vec3i& c) {

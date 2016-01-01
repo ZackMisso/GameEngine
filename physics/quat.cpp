@@ -1,5 +1,8 @@
 #include "quat.h"
 #include <math.h>
+#include <iostream>
+
+using namespace std;
 
 Quat::Quat() {
 	v.xpos = 0.0f;
@@ -76,4 +79,33 @@ Quat* Quat::makeQuatAngleAxis(float angle,Vec3 &axis) {
 	return new Quat(cos(halfAngle),c);
 }
 
-// keep on implementine
+void Quat::apply() {
+	// to be implemented
+}
+
+void Quat::applyToMatrix(Mat4 &matrix) {
+	// to be implemented
+}
+
+void Quat::print() {
+	cout << "Printing Quaternion Values:";
+	cout << s << " ";
+	v.print();
+}
+
+Vec3 Quat::rotateVector(Vec3 &vec) {
+	// maybe add check if the quaternion is valid
+	Quat quat(0,vec);
+	Quat *inv = copy();
+	inv->conjugate();
+	inv->multiply(quat);
+	inv->multiply(*this);
+	Vec3 ret = inv->v.copy();	
+	delete inv;
+	return ret;
+}
+
+void Quat::multiply(Quat &other) {
+	// maybe add check if the quaternion is valid
+	// to be implemented after vector classes are finished
+}

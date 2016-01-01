@@ -1,4 +1,7 @@
 #include "vec2i.h"
+#include <iostream>
+
+using namespace std;
 
 Vec2i::Vec2i(){
 	xpos = 0;
@@ -17,6 +20,15 @@ void Vec2i::negate() {
 
 int Vec2i::magnitude() {
 	return xpos*xpos + ypos*ypos;
+}
+
+Vec2i Vec2i::copy() {
+	Vec2i tmp(xpos,ypos);
+	return tmp;
+}
+
+void Vec2i::print(){
+	cout << "X :: " << xpos << " Y :: " << ypos << endl;
 }
 
 Vec2i Vec2i::operator+(const Vec2i& c) {

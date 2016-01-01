@@ -1,5 +1,8 @@
 #include "vec2d.h"
 #include <tgmath.h>
+#include <iostream>
+
+using namespace std;
 
 Vec2d::Vec2d() {
 	xpos = 0.0;
@@ -24,6 +27,15 @@ void Vec2d::normalize() {
 
 double Vec2d::magnitude() {
 	return sqrt(xpos*xpos + ypos*ypos);
+}
+
+Vec2d Vec2d::copy() {
+	Vec2d tmp(xpos,ypos);
+	return tmp;
+}
+
+void Vec2d::print() {
+	cout << "X :: " << xpos << " Y :: " << ypos << endl;
 }
 
 Vec2d Vec2d::operator+(const Vec2d& c) {

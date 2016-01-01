@@ -18,6 +18,9 @@ public:
 	float magnitude();
 	void negate();
 	void normalize();
+	Vec3 copy();
+	// debug
+	void print();
 	// operators
 	Vec3 operator+(const Vec3& c);
 	Vec3 operator-(const Vec3& c);

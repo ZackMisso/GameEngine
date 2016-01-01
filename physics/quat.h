@@ -4,6 +4,8 @@
 #include "../math/vec3.h"
 #include "transformation.h"
 
+// Maybe change the methods to only use non-pointer types
+
 class Quat : public Transformation {
 private:
 	float s;
@@ -22,13 +24,13 @@ public:
 	void conjugate();
 	static Quat* makeQuatAngleAxis(float angle,Vec3 &axis);
 	// applications
-	/*virtual void apply();
+	virtual void apply();
 	virtual void applyToMatrix(Mat4 &matrix);
 	// debug
 	void print();
 	// operator methods
 	Vec3 rotateVector(Vec3 &vec);
-	void multiply(Quat *other);*/
+	void multiply(Quat &other);
 };
 
 #endif

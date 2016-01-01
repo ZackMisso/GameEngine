@@ -12,6 +12,9 @@ public:
 	// methods
 	void negate();
 	int magnitude();
+	Vec2i copy();
+	// debug
+	void print();
 	// operators
 	Vec2i operator+(const Vec2i& c);
 	Vec2i operator-(const Vec2i& c);

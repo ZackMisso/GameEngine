@@ -18,6 +18,9 @@ public:
 	double magnitude();
 	void negate();
 	void normalize();
+	Vec3d copy();
+	// debug
+	void print();
 	// operators
 	Vec3d operator+(const Vec3d& c);
 	Vec3d operator-(const Vec3d& c);

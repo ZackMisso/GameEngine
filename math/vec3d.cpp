@@ -1,5 +1,8 @@
 #include "vec3d.h"
 #include <tgmath.h>
+#include <iostream>
+
+using namespace std;
 
 Vec3d::Vec3d() {
 	xpos = 0.0;
@@ -40,6 +43,15 @@ void Vec3d::normalize() {
 	xpos /= mag;
 	ypos /= mag;
 	zpos /= mag;
+}
+
+Vec3d Vec3d::copy() {
+	Vec3d tmp(xpos,ypos,zpos);
+	return tmp;
+}
+
+void Vec3d::print() {
+	cout << "X :: " << xpos << " Y :: " << ypos << " Z :: " << zpos << endl;
 }
 
 Vec3d Vec3d::operator+(const Vec3d& c) {
