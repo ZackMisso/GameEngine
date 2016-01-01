@@ -26,6 +26,8 @@ public:
 	Vec3 operator-(const Vec3& c);
 	Vec3 operator*(const float c);
 	Vec3 operator/(const float c);
+	float operator*(const Vec3& c); // dot product
+	Vec3 operator/(const Vec3& c); // cross product
 };
 
 #endif

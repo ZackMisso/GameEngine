@@ -14,7 +14,7 @@ private:
 	void extend() {
 		max+=size*.3+10;
 		T* tmp=new T[max];
-		for(int i=0;i<sizeli++)
+		for(int i=0;i<size;i++)
 			tmp[i]=ary[i];
 		delete[] ary;
 		ary=tmp;
@@ -23,6 +23,12 @@ public:
 	Array() {
 		size=0;
 		max=10;
+		ary=new T[max];
+	}
+
+	Array(int siz) {
+		size=0;
+		max=siz+1;
 		ary=new T[max];
 	}
 
@@ -63,6 +69,8 @@ public:
 	}
 
 	T get(int ind) {
-		return ary[index];
+		return ary[ind];
 	}
 };
+
+#endif

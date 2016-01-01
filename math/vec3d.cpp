@@ -85,3 +85,15 @@ Vec3d Vec3d::operator/(const double c) {
 	tmp.zpos = zpos / c;
 	return tmp;
 }
+
+double Vec3d::operator*(const Vec3d& c) {
+	return xpos*c.xpos + ypos*c.ypos + zpos*c.zpos;
+}
+
+Vec3d Vec3d::operator/(const Vec3d& c) {
+	Vec3d tmp;
+	tmp.xpos = ypos*c.zpos - zpos*c.ypos;
+	tmp.ypos = zpos*c.xpos - xpos*c.zpos;
+	tmp.zpos = xpos*c.ypos - ypos*c.xpos;
+	return tmp;
+}

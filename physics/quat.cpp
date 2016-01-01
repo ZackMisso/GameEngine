@@ -93,6 +93,7 @@ void Quat::print() {
 	v.print();
 }
 
+// TODO :: TEST
 Vec3 Quat::rotateVector(Vec3 &vec) {
 	// maybe add check if the quaternion is valid
 	Quat quat(0,vec);
@@ -105,7 +106,13 @@ Vec3 Quat::rotateVector(Vec3 &vec) {
 	return ret;
 }
 
+// TODO :: TEST
 void Quat::multiply(Quat &other) {
 	// maybe add check if the quaternion is valid
-	// to be implemented after vector classes are finished
+	float tmp = s*other.s - v*other.v;
+	Vec3 v1 = other.v*s;
+	Vec3 v2 = v*other.s;
+	v=v/other.v;
+	v=v+v1+v2;
+	s=tmp;
 }

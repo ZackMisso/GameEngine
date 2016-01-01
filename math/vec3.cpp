@@ -85,3 +85,15 @@ Vec3 Vec3::operator/(const float c) {
 	tmp.zpos = zpos / c;
 	return tmp;
 }
+
+float Vec3::operator*(const Vec3& c) {
+	return xpos*c.xpos + ypos*c.ypos + zpos*c.zpos;
+}
+
+Vec3 Vec3::operator/(const Vec3& c) {
+	Vec3 tmp;
+	tmp.xpos = ypos*c.zpos - zpos*c.ypos;
+	tmp.ypos = zpos*c.xpos - xpos*c.zpos;
+	tmp.zpos = xpos*c.ypos - ypos*c.xpos;
+	return tmp;
+}

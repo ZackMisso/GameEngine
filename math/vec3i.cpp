@@ -77,3 +77,15 @@ Vec3i Vec3i::operator/(const int c) {
 	tmp.zpos = zpos / c;
 	return tmp;
 }
+
+int Vec3i::operator*(const Vec3i& c) {
+	return xpos*c.xpos + ypos*c.ypos + zpos*c.zpos;
+}
+
+Vec3i Vec3i::operator/(const Vec3i& c) {
+	Vec3i tmp;
+	tmp.xpos = ypos*c.zpos - zpos*c.ypos;
+	tmp.ypos = zpos*c.xpos - xpos*c.zpos;
+	tmp.zpos = xpos*c.ypos - ypos*c.xpos;
+	return tmp;
+}

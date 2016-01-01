@@ -24,6 +24,8 @@ class Vec3i {
 	Vec3i operator-(const Vec3i& c);
 	Vec3i operator*(const int c);
 	Vec3i operator/(const int c);
+	int operator*(const Vec3i& c); // dot product
+	Vec3i operator/(const Vec3i& c); // cross product
 };
 
 #endif
