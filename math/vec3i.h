@@ -4,6 +4,7 @@
 #include "vec2i.h"
 
 class Vec3i {
+public:
 	// instance variables
 	int xpos;
 	int ypos;

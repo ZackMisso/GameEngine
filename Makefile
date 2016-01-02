@@ -24,10 +24,10 @@ LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
 
 ALL.O = main.o \
 	math/vec2.o math/vec2d.o math/vec2i.o math/vec3.o math/vec3d.o math/vec3i.o math/mat4.o \
-	physics/quat.o physics/transformation.o \
+	physics/quat.o physics/transformation.o physics/vertex.o physics/face.o \
 	subsystems/memory/memsub.o \
-	subsystems/file/filersub.o \
-	scene/scenenode.o scene/scenegraph.o scene/objectnode.o
+	subsystems/file/filersub.o subsystems/file/meshreader.o \
+	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)
