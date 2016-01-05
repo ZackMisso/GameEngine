@@ -24,7 +24,11 @@ SceneNode::~SceneNode() {
 	// so no logic is needed to delete the parent pointer.
 }
 
-void SceneNode::traverse() {
+void SceneNode::addChild(SceneNode *node) {
+	children->add(node);
+}
+
+void SceneNode::traverse(TraverseData *data) {
 	// does nothing... for now
 }
 

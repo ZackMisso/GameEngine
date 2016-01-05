@@ -2,6 +2,7 @@
 #define __SCENENODE_H__
 
 #include "../datastructures/array.h"
+#include "traversedata.h"
 
 // All nodes for the scene graph will extend this class
 
@@ -16,11 +17,15 @@ public:
 	SceneNode();
 	SceneNode(SceneNode* par);
 	~SceneNode();
+	// children related
+	void addChild(SceneNode* node);
 	// traversal
-	virtual void traverse();
+	virtual void traverse(TraverseData *data);
 	// debug
 	virtual void print();
 	// getters
+	SceneNode *getParent();
+	Array<SceneNode*>* getChildren();
 	int getId();
 };
 
