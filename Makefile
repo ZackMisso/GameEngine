@@ -28,7 +28,9 @@ ALL.O = main.o \
 	subsystems/memory/memsub.o \
 	subsystems/file/filersub.o subsystems/file/meshreader.o \
 	subsystems/thread/threadsub.o \
-	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o scene/geomnode.o scene/lightnode.o
+	subsystems/debug/debugsub.o \
+	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o scene/geomnode.o scene/lightnode.o \
+	scene/rotnode.o scene/transnode.o scene/scalenode.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)

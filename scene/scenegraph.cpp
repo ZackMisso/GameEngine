@@ -22,7 +22,7 @@ void SceneGraph::Destroy() {
 }
 
 void SceneGraph::traversal() {
-	rootNode->traverse();
+	//rootNode->traverse();
 }
 
 void SceneGraph::print() {

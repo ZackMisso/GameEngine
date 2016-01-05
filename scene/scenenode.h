@@ -27,6 +27,8 @@ public:
 	SceneNode *getParent();
 	Array<SceneNode*>* getChildren();
 	int getId();
+	// setters
+	void setParent(SceneNode* param);
 };
 
 #endif

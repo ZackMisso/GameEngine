@@ -1,4 +1,8 @@
 #include "vec4.h"
+#include <tgmath.h>
+#include <iostream>
+
+using namespace std;
 
 Vec4::Vec4() {
 	xpos = 0.0f;
@@ -36,11 +40,69 @@ Vec4::Vec4(float x,float y,float z,float w) {
 }
 
 float Vec4::magnitude() {
-	// to be implemented
+	return sqrtf(xpos*xpos + ypos*ypos + zpos*zpos + wpos*wpos);
 }
 
 void Vec4::negate() {
-	// to be implemented
+	xpos = -xpos;
+	ypos = -ypos;
+	zpos = -zpos;
+	wpos = -wpos;
 }
 
-// implement the rest
+void Vec4::normalize() {
+	float mag = magnitude();
+	xpos /= mag;
+	ypos /= mag;
+	zpos /= mag;
+	wpos /= mag;
+}
+
+Vec4 Vec4::copy() {
+	Vec4 tmp(xpos,ypos,zpos,wpos);
+	return tmp;
+}
+
+void Vec4::print() {
+	cout << "X :: " << xpos << " Y :: " << ypos << " Z :: " << zpos << " W :: " << wpos << endl;
+}
+
+Vec4 Vec4::operator+(const Vec4& c) {
+	Vec4 tmp;
+	tmp.xpos = xpos + c.xpos;
+	tmp.ypos = ypos + c.ypos;
+	tmp.zpos = zpos + c.zpos;
+	tmp.wpos = wpos + c.wpos;
+	return tmp;
+}
+
+Vec4 Vec4::operator-(const Vec4& c) {
+	Vec4 tmp;
+	tmp.xpos = xpos + c.xpos;
+	tmp.ypos = ypos + c.ypos;
+	tmp.zpos = zpos + c.zpos;
+	tmp.wpos = wpos + c.wpos;
+	return tmp;
+}
+
+Vec4 Vec4::operator*(const float c) {
+	Vec4 tmp;
+	tmp.xpos = xpos * c;
+	tmp.ypos = ypos * c;
+	tmp.zpos = zpos * c;
+	tmp.wpos = wpos * c;
+	return tmp;
+}
+
+Vec4 Vec4::operator/(const float c) {
+	Vec4 tmp;
+	tmp.xpos = xpos / c;
+	tmp.ypos = ypos / c;
+	tmp.zpos = zpos / c;
+	tmp.wpos = wpos / c;
+	return tmp;
+}
+
+float Vec4::operator*(const Vec4& c) {
+	return xpos*c.xpos + ypos*c.ypos + zpos*c.zpos + wpos*c.wpos;
+}

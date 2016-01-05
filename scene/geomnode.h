@@ -5,15 +5,18 @@
 #include "scenenode.h"
 #include "traversedata.h"
 
-class GeomNode : SceneNode {
+//class SceneNode;
+
+class GeomNode : public SceneNode {
 private:
 	TriMesh *mesh;
 public:
 	GeomNode();
-	GeomNode(TriMesh *shape,Node* parent);
+	GeomNode(TriMesh *shape,SceneNode* parent);
 	GeomNode(TriMesh *shape);
 	~GeomNode();
 	virtual void traverse(TraverseData *data);
+	virtual void print();
 };
 
 #endif

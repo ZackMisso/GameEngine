@@ -2,6 +2,7 @@
 #define __LIGHTNODE_H__
 
 #include "scenenode.h"
+#include "../math/vec4.h"
 
 class LightNode : public SceneNode {
 private:

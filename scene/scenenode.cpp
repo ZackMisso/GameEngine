@@ -36,4 +36,8 @@ void SceneNode::print() {
 	// does nothing... for now
 }
 
+SceneNode* SceneNode::getParent() { return parent; }
+Array<SceneNode*>* SceneNode::getChildren() { return children; }
 int SceneNode::getId() { return sceneId; }
+
+void SceneNode::setParent(SceneNode* param) { parent = param; }

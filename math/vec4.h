@@ -1,6 +1,9 @@
 #ifndef __VEC4_H__
 #define __VEC4_H__
 
+#include "vec3.h"
+#include "vec2.h"
+
 class Vec4 {
 public:
 	// instance variables

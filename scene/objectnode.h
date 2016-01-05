@@ -2,6 +2,11 @@
 #define __OBJECTNODE_H__
 
 #include "scenenode.h"
+#include "attribnode.h"
+#include "geomnode.h"
+#include "scalenode.h"
+#include "rotnode.h"
+#include "transnode.h"
 #include <string>
 
 using namespace std;
@@ -12,6 +17,13 @@ class ObjectNode : public SceneNode {
 private:
 	// instance variables
 	string name;
+	GeomNode *geomNode;
+	AttributeNode *attriNode;
+	ScaleNode *scale;
+	RotationNode *orientation;
+	TranslateNode *position;
+	// methods
+	void init();
 public:
 	// constructors
 	ObjectNode();
@@ -23,6 +35,12 @@ public:
 	virtual void traverse();
 	// debug
 	virtual void print();
+	// getter methods
+	GeomNode* getGeomNode();
+	AttributeNode* getAttributeNode();
+	ScaleNode* getScale();
+	RotationNode* getOrientation();
+	TranslateNode* getPosition();
 };
 
 #endif

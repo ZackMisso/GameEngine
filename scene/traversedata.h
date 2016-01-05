@@ -1,6 +1,9 @@
 #ifndef __TRAVERSEDATA_H__
 #define __TRAVERSEDATA_H__
 
+//#include "attribnode.h"
+class AttributeNode;
+
 // the instance variables in this class should never be modified
 // during traversal of any node
 
@@ -13,6 +16,6 @@ public:
 	TraverseData();
 	// getters
 	AttributeNode* getCurrentAttr();
-}
+};
 
 #endif
