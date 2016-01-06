@@ -26,11 +26,12 @@ ALL.O = main.o \
 	math/vec2.o math/vec2d.o math/vec2i.o math/vec3.o math/vec3d.o math/vec3i.o math/vec4.o math/mat4.o \
 	physics/quat.o physics/transformation.o physics/vertex.o physics/face.o \
 	subsystems/memory/memsub.o \
-	subsystems/file/filersub.o subsystems/file/meshreader.o \
+	subsystems/file/filersub.o subsystems/file/meshreader.o subsystems/file/scenereader.o subsystems/file/scenewriter.o \
 	subsystems/thread/threadsub.o \
 	subsystems/debug/debugsub.o \
 	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o scene/geomnode.o scene/lightnode.o \
-	scene/rotnode.o scene/transnode.o scene/scalenode.o
+	scene/rotnode.o scene/transnode.o scene/scalenode.o \
+	editor/sceneeditor.o editor/editorstate.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)

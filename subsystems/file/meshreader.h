@@ -9,6 +9,8 @@
 #define LINE_SIZE 1024
 #define TOKEN_LEN 8
 
+using namespace std;
+
 enum TokenID {T_NONE=-1,T_VERT,T_FACE};
 
 struct TokenPair {
@@ -28,6 +30,9 @@ class MeshReader {
 private:
 	// instance variables
 	static MeshReader *instance;
+	TokenPair emptyPair;
+	TokenPair tokenMap[3];
+	const char* tokSeps = " \t";
 	// constructors
 	MeshReader();
 public:
@@ -45,7 +50,7 @@ public:
 	void processSkip(char *tok);
 	void processVertex(char *tok,TriMesh *mesh);
 	void processFace(char *tok,TriMesh *mesh);
-	TokenPair *tokenMatch(char tok); 
+	TokenPair *tokenMatch(char *tok); 
 };
 
 MeshReader* MeshReader::instance = 0x0;
