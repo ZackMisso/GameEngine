@@ -5,7 +5,7 @@
 
 class ThreadSubsystem {
 private:
-	// instance variables
+	// static variables
 	static ThreadSubsystem* instance;
 	// constructors
 	ThreadSubsystem();
