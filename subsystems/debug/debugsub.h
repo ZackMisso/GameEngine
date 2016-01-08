@@ -18,6 +18,4 @@ public:
 	void print();
 };
 
-DebugSubsystem* DebugSubsystem::instance = 0x0;
-
 #endif

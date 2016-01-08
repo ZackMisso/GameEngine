@@ -1,5 +1,7 @@
 #include "threadsub.h"
 
+ThreadSubsystem* ThreadSubsystem::instance = 0x0;
+
 ThreadSubsystem::ThreadSubsystem() {
 	// to be implemented
 }

@@ -10,7 +10,10 @@ private:
 	Vec3 norm;
 public:
 	// constructors
+	Vertex();
 	Vertex(float *vals);
+	Vertex(Vec3 position);
+	Vertex(float x,float y,float z);
 	//~Vertex();
 	// getter methods
 	Vec3 getPos();

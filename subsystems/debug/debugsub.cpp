@@ -1,5 +1,7 @@
 #include "debugsub.h"
 
+DebugSubsystem* DebugSubsystem::instance = 0x0;
+
 DebugSubsystem::DebugSubsystem() {
 	// to be implemented
 }

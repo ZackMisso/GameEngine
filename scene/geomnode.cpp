@@ -15,7 +15,8 @@ GeomNode::GeomNode(TriMesh *shape) : SceneNode() {
 
 GeomNode::~GeomNode() {
 	// fix the linker error here
-	// delete mesh;
+	if(mesh)
+		delete mesh;
 }
 
 void GeomNode::traverse(TraverseData *data) {

@@ -2,6 +2,8 @@
 
 // Before this class is implemented I still need to design a scene graph's file format
 
+SceneReader* SceneReader::instance = 0x0;
+
 SceneReader::SceneReader() {
 	// to be implemented
 }

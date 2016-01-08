@@ -1,5 +1,7 @@
 #include "memsub.h"
 
+MemorySubsystem* MemorySubsystem::instance = 0x0;
+
 MemorySubsystem::MemorySubsystem() {
 	// to be implemented
 }

@@ -18,3 +18,21 @@ void Mat4::print(){
 	}
 	cout << endl;
 }
+
+void Mat4::multiply(Mat4* other) {
+	// to be implemented
+}
+
+Mat4* Mat4::matrixMultiply(Mat4* one,Mat4* two) {
+	// to be implemented
+	return 0x0;
+}
+
+Mat4* Mat4::copy() {
+	// to be implemented
+	return 0x0;
+}
+
+void Mat4::multMatrix() {
+	// to be implemented
+}

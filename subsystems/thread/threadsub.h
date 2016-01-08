@@ -19,6 +19,4 @@ public:
 	void print();
 };
 
-ThreadSubsystem* ThreadSubsystem::instance = 0x0;
-
 #endif

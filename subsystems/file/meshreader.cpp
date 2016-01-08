@@ -1,5 +1,7 @@
 #include "meshreader.h"
 
+MeshReader* MeshReader::instance = 0x0;
+
 MeshReader::MeshReader() {
 	emptyPair = {"",T_NONE};
 	//tokenMap = { {"v", T_VERT}, {"f", T_FACE}, emptyPair};

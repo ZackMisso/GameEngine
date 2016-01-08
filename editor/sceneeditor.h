@@ -18,6 +18,4 @@ public:
 	static void Destroy();
 };
 
-SceneEditor* SceneEditor::instance = 0x0;
-
 #endif

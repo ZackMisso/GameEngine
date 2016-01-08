@@ -2,7 +2,6 @@
 #define __SCENEWRITER_H__
 
 #include <string>
-//class SceneGraph;
 #include "../../scene/scenegraph.h"
 
 using namespace std;
@@ -25,7 +24,5 @@ public:
 	// input handling
 	void writeScene(string dest,SceneGraph* scene);
 };
-
-SceneWriter* SceneWriter::instance = 0x0;
 
 #endif

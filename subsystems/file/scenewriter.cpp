@@ -1,5 +1,6 @@
 #include "scenewriter.h"
-//#include "../../scene/scenegraph.h"
+
+SceneWriter* SceneWriter::instance = 0x0;
 
 SceneWriter::SceneWriter() {
 	// to be implemented

@@ -1,6 +1,8 @@
 #include "scenegraph.h"
 #include "objectnode.h"
 
+SceneGraph* SceneGraph::instance = 0x0;
+
 SceneGraph::SceneGraph() {
 	rootNode = new ObjectNode("world");
 }

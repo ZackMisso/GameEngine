@@ -5,8 +5,6 @@
 #include "scenenode.h"
 #include "traversedata.h"
 
-//class SceneNode;
-
 class GeomNode : public SceneNode {
 private:
 	TriMesh *mesh;

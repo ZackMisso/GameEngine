@@ -1,5 +1,7 @@
 #include "filersub.h"
 
+FilerSubsystem* FilerSubsystem::instance = 0x0;
+
 FilerSubsystem::FilerSubsystem() {
 	// to be implemented
 }

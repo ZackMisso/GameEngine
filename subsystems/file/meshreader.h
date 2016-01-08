@@ -53,6 +53,4 @@ public:
 	TokenPair *tokenMatch(char *tok); 
 };
 
-MeshReader* MeshReader::instance = 0x0;
-
 #endif

@@ -17,6 +17,4 @@ public:
 	void print();
 };
 
-SoundSubsystem( SoundSubsystem::isntance = 0x0;
-
 #endif

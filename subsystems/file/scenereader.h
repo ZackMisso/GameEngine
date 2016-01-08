@@ -27,6 +27,4 @@ public:
 	void readScene(string scnfile,SceneGraph *scenep);
 };
 
-SceneReader* SceneReader::instance = 0x0;
-
 #endif

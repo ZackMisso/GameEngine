@@ -18,6 +18,4 @@ public:
 	void print();
 };
 
-FilerSubsystem* FilerSubsystem::instance = 0x0;
-
 #endif

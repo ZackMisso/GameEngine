@@ -25,6 +25,4 @@ public:
 	void print();
 };
 
-SceneGraph* SceneGraph::instance = 0x0;
-
 #endif

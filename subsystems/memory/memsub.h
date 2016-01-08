@@ -17,6 +17,4 @@ public:
 	void print();
 };
 
-MemorySubsystem* MemorySubsystem::instance = 0x0;
-
 #endif

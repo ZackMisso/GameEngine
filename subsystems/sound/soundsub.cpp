@@ -1,5 +1,7 @@
 #include "soundsub.h"
 
+SoundSubsystem* SoundSubsystem::instance = 0x0;
+
 SoundSubsystem::SoundSubsystem() {
 	// to be implemented
 }
