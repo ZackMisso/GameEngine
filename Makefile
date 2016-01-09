@@ -31,7 +31,8 @@ ALL.O = main.o \
 	subsystems/debug/debugsub.o \
 	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o scene/geomnode.o scene/lightnode.o \
 	scene/rotnode.o scene/transnode.o scene/scalenode.o \
-	editor/sceneeditor.o editor/editorstate.o
+	editor/sceneeditor.o editor/editorstate.o editor/objectstate.o editor/rotstate.o editor/scalestate.o editor/transstate.o \
+	editor/attribstate.o editor/geomstate.o editor/lightstate.o editor/camerastate.o
 
 engine: $(ALL.O)
 	$(CC) $(CFLAGS) -o bin/$@ $(ALL.O) $(LIBS)

@@ -13,7 +13,7 @@ public:
 	// methods
 	void multiply(Mat4* other);
 	static Mat4* matrixMultiply(Mat4 *one,Mat4 *two);
-	Matrix4* copy();
+	Mat4* copy();
 	void multMatrix();
 	void print();
 };
