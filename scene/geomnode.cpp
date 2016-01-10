@@ -1,5 +1,5 @@
 #include "geomnode.h"
-//#include "scenenode.h"
+#include "attribnode.h"
 
 GeomNode::GeomNode() : SceneNode() {
 	mesh = 0x0;
@@ -14,17 +14,15 @@ GeomNode::GeomNode(TriMesh *shape) : SceneNode() {
 }
 
 GeomNode::~GeomNode() {
-	// fix the linker error here
 	if(mesh)
 		delete mesh;
 }
 
 void GeomNode::traverse(TraverseData *data) {
-	//if(mesh)
-	//	mesh->render(data->getCurrentAttr());
-	//Array<SceneNode*>* chd = getChildren();
-	//for(int i=0;i<chd->getSize();i++)
-	//	chd->get(i)->traverse(data);
+	if(mesh)
+		mesh->render(data->currentAttr);
+	for(int i=0;i<children->getSize();i++)
+		children->get(i)->traverse(data);
 }
 
 void GeomNode::print() {

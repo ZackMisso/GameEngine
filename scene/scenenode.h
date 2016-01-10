@@ -7,7 +7,7 @@
 // All nodes for the scene graph will extend this class
 
 class SceneNode {
-private:
+protected:
 	// instance variables
 	SceneNode *parent;
 	Array<SceneNode*> *children;
@@ -23,12 +23,6 @@ public:
 	virtual void traverse(TraverseData *data);
 	// debug
 	virtual void print();
-	// getters
-	SceneNode *getParent();
-	Array<SceneNode*>* getChildren();
-	int getId();
-	// setters
-	void setParent(SceneNode* param);
 };
 
 #endif
