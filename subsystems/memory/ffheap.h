@@ -8,7 +8,7 @@ public:
 	// heap methods
 	virtual void init(long size);
 	virtual void free(void* ptr);
-	virtual void* malloc(size_t size);
+	virtual void* malloc(int size);
 };
 
 #endif

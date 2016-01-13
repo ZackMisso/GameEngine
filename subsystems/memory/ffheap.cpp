@@ -8,6 +8,7 @@ void FirstFitHeap::free(void* ptr) {
 	// to be implemented
 }
 
-void* FirstFitHeap::malloc(size_t size) {
+void* FirstFitHeap::malloc(int size) {
 	// to be implemented
+	return 0x0;
 }

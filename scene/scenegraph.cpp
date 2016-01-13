@@ -8,6 +8,7 @@ SceneGraph::SceneGraph() {
 }
 
 SceneGraph::~SceneGraph() {
+	clearScene();
 	delete rootNode;
 }
 
@@ -21,6 +22,10 @@ void SceneGraph::Initialize() {
 
 void SceneGraph::Destroy() {
 	delete instance;
+}
+
+void SceneGraph::clearScene() {
+	// to be implemented
 }
 
 void SceneGraph::traversal() {

@@ -19,6 +19,7 @@ public:
 	static SceneGraph* GetInstance();
 	static void Initialize();
 	static void Destroy();
+	void clearScene();
 	// traversal
 	void traversal();
 	// debug

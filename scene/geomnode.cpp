@@ -20,7 +20,7 @@ GeomNode::~GeomNode() {
 
 void GeomNode::traverse(TraverseData *data) {
 	if(mesh)
-		mesh->render(data->currentAttr);
+		mesh->render(data->attributes->peek());
 	for(int i=0;i<children->getSize();i++)
 		children->get(i)->traverse(data);
 }

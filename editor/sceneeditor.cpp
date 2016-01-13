@@ -2,7 +2,7 @@
 
 SceneEditor* SceneEditor::instance = 0x0;
 
-SceneEditor::SceneEditor() {
+SceneEditor::SceneEditor() : currentState(EditorState(0x0)) {
 	// to be implemented
 }
 

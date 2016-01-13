@@ -71,6 +71,13 @@ public:
 	T get(int ind) {
 		return ary[ind];
 	}
+
+	bool contains(T val) {
+		for(int i=0;i<size;i++)
+			if(ary[i]==val)
+				return true;
+		return false;
+	}
 };
 
 #endif
