@@ -1,6 +1,7 @@
 #include "lightnode.h"
 
 LightNode::LightNode() : SceneNode() {
+	type = Lgt;
 	ambient.xpos = 0.0f;
 	ambient.ypos = 0.0f;
 	ambient.zpos = 0.0f;
@@ -18,6 +19,7 @@ LightNode::LightNode() : SceneNode() {
 }
 
 LightNode::LightNode(SceneNode* parent) : SceneNode(parent) {
+	type = Lgt;
 	ambient.xpos = 0.0f;
 	ambient.ypos = 0.0f;
 	ambient.zpos = 0.0f;
@@ -35,6 +37,7 @@ LightNode::LightNode(SceneNode* parent) : SceneNode(parent) {
 }
 
 LightNode::LightNode(SceneNode* parent,Vec4 a,Vec4 d,Vec4 s,float val) {
+	type = Lgt;
 	ambient = a;
 	diffuse = d;
 	specular = s;

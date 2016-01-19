@@ -1,10 +1,12 @@
 #include "cameranode.h"
 
 CameraNode::CameraNode() : SceneNode() {
+	type = Cam;
 	// to be implemented
 }
 
 CameraNode::CameraNode(SceneNode* parent) : SceneNode(parent) {
+	type = Cam;
 	// to be implemented
 }
 

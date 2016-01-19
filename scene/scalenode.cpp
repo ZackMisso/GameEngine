@@ -4,18 +4,21 @@
 using namespace std;
 
 ScaleNode::ScaleNode() : SceneNode() {
+	type = Scl;
 	scale.xpos = 1.0f;
 	scale.ypos = 1.0f;
 	scale.zpos = 1.0f;
 }
 
 ScaleNode::ScaleNode(SceneNode* parent) : SceneNode(parent) {
+	type = Scl;
 	scale.xpos = 1.0f;
 	scale.ypos = 1.0f;
 	scale.zpos = 1.0f;
 }
 
 ScaleNode::ScaleNode(Vec3 scl,SceneNode* parent) : SceneNode(parent) {
+	type = Scl;
 	scale = scl;
 }
 

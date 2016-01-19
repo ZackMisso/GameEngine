@@ -1,15 +1,19 @@
 #include "attribnode.h"
 
 AttributeNode::AttributeNode(SceneNode* parent) : SceneNode(parent) {
-	// to be implemented
+	type = Attrib;
+	normalMode = None;
+	renderingMode = Solid;
 }
 
 void AttributeNode::traverse(TraverseData* data) {
-	// to be implemented
+	data->attributes->push(this);
+	for(int i=0;i<children->getSize();i++)
+		children->get(i)->traverse(data);
 }
 
 void AttributeNode::print() {
-	// to be implemented
+	// to be implemented later
 }
 
 RenderingMode AttributeNode::getRenderingMode() { return renderingMode; }

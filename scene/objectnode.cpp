@@ -19,6 +19,7 @@ ObjectNode::ObjectNode(string nam,SceneNode* par) : SceneNode(par) {
 }
 
 void ObjectNode::init() {
+	type = Obj;
 	geomNode = 0x0;
 	attriNode = 0x0;
 	scale = 0x0;

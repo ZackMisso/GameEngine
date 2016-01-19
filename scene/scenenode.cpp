@@ -3,6 +3,7 @@
 SceneNode::SceneNode() {
 	parent = 0x0;
 	children = 0x0;
+	type = NoN;
 	// add logic to get the next id
 	sceneId = -1;
 }
@@ -10,6 +11,7 @@ SceneNode::SceneNode() {
 SceneNode::SceneNode(SceneNode *par) {
 	parent = par;
 	children = 0x0;
+	type = NoN;
 	// add logic to get the next id
 	sceneId = -1;
 }

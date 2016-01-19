@@ -4,18 +4,21 @@
 using namespace std;
 
 TranslateNode::TranslateNode() {
+	type = Trans;
 	translation.xpos = 0.0f;
 	translation.ypos = 0.0f;
 	translation.zpos = 0.0f;
 }
 
 TranslateNode::TranslateNode(SceneNode *parent) : SceneNode(parent) {
+	type = Trans;
 	translation.xpos = 0.0f;
 	translation.ypos = 0.0f;
 	translation.zpos = 0.0f;
 }
 
 TranslateNode::TranslateNode(Vec3 trans,SceneNode *parent) : SceneNode(parent) {
+	type = Trans;
 	translation = trans;
 }
 
