@@ -3,27 +3,23 @@
 
 #include "scenenode.h"
 
-// Singleton Class
-
 class SceneGraph {
 private:
 	// instance variables
 	SceneNode *rootNode;
-	static SceneGraph *instance;
+public:
 	// constructors
 	SceneGraph();
-public:
 	// destructor
 	~SceneGraph();
-	// creation
-	static SceneGraph* GetInstance();
-	static void Initialize();
-	static void Destroy();
+	// methods
 	void clearScene();
 	// traversal
 	void traversal();
 	// debug
 	void print();
+	// getters
+	SceneNode* getRoot();	
 };
 
 #endif

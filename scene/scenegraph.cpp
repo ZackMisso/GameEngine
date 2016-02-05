@@ -12,18 +12,6 @@ SceneGraph::~SceneGraph() {
 	delete rootNode;
 }
 
-SceneGraph* SceneGraph::GetInstance() {
-	return instance;
-}
-
-void SceneGraph::Initialize() {
-	instance = new SceneGraph();
-}
-
-void SceneGraph::Destroy() {
-	delete instance;
-}
-
 void SceneGraph::clearScene() {
 	// to be implemented
 }
@@ -35,3 +23,5 @@ void SceneGraph::traversal() {
 void SceneGraph::print() {
 	// implement for debugging purposes
 }
+
+SceneNode* SceneGraph::getRoot() { return rootNode; }
