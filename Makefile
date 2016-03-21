@@ -24,16 +24,17 @@ LIBS = $(GLFW_LIBS) $(FRAMEWORKS)
 
 ALL.O = main.o \
 	math/vec2.o math/vec2d.o math/vec2i.o math/vec3.o math/vec3d.o math/vec3i.o math/vec4.o math/mat4.o \
-	physics/quat.o physics/transformation.o physics/vertex.o physics/face.o physics/trimesh.o \
+	physics/quat.o physics/transformation.o physics/vertex.o physics/face.o physics/trimesh.o physics/quadmesh.o \
 	subsystems/memory/memsub.o subsystems/memory/heap.o subsystems/memory/ffheap.o \
 	subsystems/file/filersub.o subsystems/file/meshreader.o subsystems/file/scenereader.o subsystems/file/scenewriter.o \
 	subsystems/thread/threadsub.o \
 	subsystems/debug/debugsub.o \
 	scene/scenenode.o scene/scenegraph.o scene/objectnode.o scene/attribnode.o scene/geomnode.o scene/lightnode.o \
-	scene/rotnode.o scene/transnode.o scene/scalenode.o scene/cameranode.o scenemanager.o \
+	scene/rotnode.o scene/transnode.o scene/scalenode.o scene/cameranode.o scene/scenemanager.o \
 	editor/sceneeditor.o editor/editorstate.o editor/objectstate.o editor/rotstate.o editor/scalestate.o editor/transstate.o \
 	editor/attribstate.o editor/geomstate.o editor/lightstate.o editor/camerastate.o \
 	gui/guimanager.o \
+	gameplay/entity.o \
 	tests/scenegraphone.o
 
 engine: $(ALL.O)
